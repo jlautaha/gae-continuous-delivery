@@ -10,12 +10,6 @@ def hello():
     print("I am inside hello world")
     return 'Hello World! CD'
 
-@app.route('/echo/<name>')
-def echo(name):
-    print("This was placed in the url: new-{}".format(name))
-    val = {"new-name": name}
-    return jsonify(val)
-
 @app.route('/coinflip/<choice>')
 def coinflip(choice)
     x = random.choice(['heads','tails'])
